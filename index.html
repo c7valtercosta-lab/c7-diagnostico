@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>C7 Automação - Diagnóstico</title>
+  <title>C7 Diagnóstico para Catraca</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -21,63 +21,89 @@
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    .basico { border-left: 5px solid #22c55e; }
+    .medio { border-left: 5px solid #f59e0b; }
+    .alerta { border-left: 5px solid #ef4444; }
+
     button {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       border: none;
       background: #e11d48;
       color: white;
       border-radius: 8px;
       margin-top: 10px;
       font-size: 16px;
+      cursor: pointer;
     }
+
+    .social {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .social a {
+      flex: 1;
+    }
+
+    .whatsapp { background: #25D366; }
+    .instagram { background: #E1306C; }
+
   </style>
 </head>
 <body>
 
-<h1>🔧 Diagnóstico de Catracas</h1>
-<p style="text-align:center;">C7 Automação</p>
+<h1>🔧 C7 Diagnóstico para Catraca</h1>
+<p style="text-align:center;">Resolva problemas em segundos</p>
 
-<div class="card">
-  <h3>Catraca travada</h3>
+<div class="card basico">
+  <h3>✅ Catraca travada</h3>
   <p>Verifique objeto preso, reinicie e tente liberação manual.</p>
 </div>
 
-<div class="card">
-  <h3>Luz vermelha</h3>
+<div class="card basico">
+  <h3>✅ Luz vermelha</h3>
   <p>Verifique cadastro e horário de acesso.</p>
 </div>
 
-<div class="card">
-  <h3>Sem comunicação</h3>
+<div class="card medio">
+  <h3>⚠️ Sem comunicação</h3>
   <p>Verifique cabos e rede.</p>
 </div>
 
-<div class="card">
-  <h3>Beep constante</h3>
+<div class="card medio">
+  <h3>⚠️ Beep constante</h3>
   <p>Verifique sensor e posição.</p>
 </div>
 
-<div class="card">
-  <h3>Biometria não reconhece</h3>
+<div class="card alerta">
+  <h3>🚨 Biometria não reconhece</h3>
   <p>Limpe o leitor e recadastre.</p>
 </div>
 
-<div class="card">
-  <h3>Sem energia</h3>
+<div class="card alerta">
+  <h3>🚨 Sem energia</h3>
   <p>Verifique tomada e disjuntor.</p>
 </div>
 
-<a href="https://wa.me/5521999629228?text=Quero acesso ao diagnóstico avançado">
-  <button>📞 Solicitar acesso</button>
-
-</a>
 <div class="card">
   <h3>🔒 Diagnóstico Técnico Avançado</h3>
-  <p>Acesso exclusivo para clientes C7 Automação</p>
-  <a href="https://wa.me/5521999629228">
-    <button>Solicitar acesso</button>
+  <p>Acesso exclusivo para clientes C7</p>
+  <a href="https://wa.me/5521999629228?text=Quero acesso ao diagnóstico avançado">
+    <button>Solicitar acesso avançado</button>
   </a>
 </div>
+
+<div class="social">
+  <a href="https://wa.me/5521999629228?text=Preciso de suporte na catraca">
+    <button class="whatsapp">WhatsApp</button>
+  </a>
+
+  <a href="https://instagram.com">
+    <button class="instagram">Instagram</button>
+  </a>
+</div>
+
 </body>
 </html>
