@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {font-family: Arial; background:#f4f4f4; padding:20px;}
+body {font-family: Arial; background:#f4f4f4; margin:0; padding:20px;}
 h1 {text-align:center;}
 
 .card {
@@ -40,8 +40,7 @@ cursor:pointer;
 .vermelho {background:#e11d48;}
 .telefone {background:#2563eb;}
 .instagram {background:#E1306C;}
-
-.info {text-align:center; font-size:14px; margin-top:10px;}
+.info {text-align:center; font-size:14px; margin-top:10px; color:#555;}
 </style>
 
 </head>
@@ -49,10 +48,9 @@ cursor:pointer;
 <body>
 
 <div style="text-align:center;">
-<img src="LOGO NOVO ZAP.jpg" style="width:120px;">
+<img src="LOGO NOVO ZAP.jpg" style="width:120px; margin-bottom:10px;">
 </div>
 
-<!-- IDIOMA -->
 <div style="text-align:center; margin:10px;">
 <select onchange="mudarIdioma(this.value)" id="idioma">
 <option value="pt">🇧🇷 Português</option>
@@ -62,11 +60,10 @@ cursor:pointer;
 </div>
 
 <h1 id="titulo">🔧 C7 Diagnóstico para Catraca</h1>
+
 <p id="subtitulo" style="text-align:center;">
 Reduza falhas no acesso e evite chamados técnicos desnecessários
 </p>
-
-<!-- PROBLEMAS -->
 
 <div class="card basico">
 <h3 id="travada">⚠️ Catraca travada</h3>
@@ -131,35 +128,29 @@ Reduza falhas no acesso e evite chamados técnicos desnecessários
 </ul>
 </div>
 
-<!-- SUPORTE -->
-
 <div class="card">
 <h3 id="suporte">🔒 Não resolveu?</h3>
 <p id="textoSup">Solicite atendimento técnico especializado</p>
 
-<a href="https://wa.me/5521999629228">
+<a id="linkSup" href="https://wa.me/5521999629228?text=Preciso%20de%20suporte%20na%20catraca">
 <button class="whatsapp" id="btnSup">💬 Suporte Técnico</button>
 </a>
 
-<a href="https://wa.me/5521999629228">
+<a id="linkAt" href="https://wa.me/5521999629228?text=Quero%20agendar%20um%20atendimento%20técnico">
 <button class="vermelho" id="btnAt">Solicitar Atendimento Técnico</button>
 </a>
 
 <p class="info" id="info">⚡ Resposta rápida em poucos minutos</p>
 </div>
 
-<!-- MIDIA -->
-
 <div class="card">
 <h3 id="midia">📎 Enviar foto ou vídeo</h3>
 <p id="midiaTxt">Envie imagens do problema para diagnóstico mais rápido</p>
 
-<a href="https://wa.me/5521999629228">
+<a id="linkMidia" href="https://wa.me/5521999629228?text=Estou%20com%20problema%20na%20catraca.%20Vou%20enviar%20foto/vídeo">
 <button class="whatsapp" id="btnMidia">Enviar para WhatsApp</button>
 </a>
 </div>
-
-<!-- CONTATO -->
 
 <div style="display:flex; gap:10px; margin-top:20px;">
 <a href="tel:+5521999629228" style="flex:1;">
@@ -171,15 +162,12 @@ Reduza falhas no acesso e evite chamados técnicos desnecessários
 </a>
 </div>
 
-<p style="text-align:center; font-size:12px; margin-top:20px;" id="rodape">
+<p style="text-align:center; font-size:12px; color:#777; margin-top:20px;" id="rodape">
 C7 Automação • Soluções em Controle de Acesso
 </p>
 
-<!-- TRADUÇÃO COMPLETA -->
-
 <script>
 const t = {
-
 pt:{
 titulo:"🔧 C7 Diagnóstico para Catraca",
 subtitulo:"Reduza falhas no acesso e evite chamados técnicos desnecessários",
@@ -231,130 +219,156 @@ btnMidia:"Enviar para WhatsApp",
 
 btnTel:"📞 Fale Conosco",
 btnInsta:"Instagram",
-rodape:"C7 Automação • Soluções em Controle de Acesso"
+rodape:"C7 Automação • Soluções em Controle de Acesso",
+
+msgSup:"Preciso de suporte na catraca",
+msgAt:"Quero agendar um atendimento técnico",
+msgMidia:"Estou com problema na catraca. Vou enviar foto/vídeo"
 },
 
 de:{
 titulo:"🔧 C7 Diagnose für Drehkreuze",
-subtitulo:"Reduzieren Sie Störungen und vermeiden Sie unnötige Einsätze",
+subtitulo:"Reduzieren Sie Zugangsstörungen und vermeiden Sie unnötige technische Einsätze",
 
 travada:"⚠️ Drehkreuz blockiert",
-t1:"✔ Benutzer überprüfen",
+t1:"✔ Benutzerregistrierung überprüfen",
 t2:"✔ Manuelle Freigabe testen",
 t3:"✔ Drehkreuz neu starten",
 
-liberada:"⚠️ Drehkreuz immer offen",
-l1:"✔ Stromversorgung prüfen",
-l2:"✔ Netzteil überprüfen",
-l3:"✔ Neustart durchführen",
+liberada:"⚠️ Drehkreuz dauerhaft freigegeben",
+l1:"✔ Stromversorgung überprüfen",
+l2:"✔ Netzteil der Steuerplatine prüfen",
+l3:"✔ Drehkreuz neu starten",
 
-negado:"🔴 Zugriff verweigert",
-n1:"✔ Benutzerstatus prüfen",
-n2:"✔ System prüfen",
-n3:"✔ Gesicht korrekt positionieren",
+negado:"🔴 Zugriff am Gesichtserkennungsleser verweigert",
+n1:"✔ Benutzerstatus überprüfen",
+n2:"✔ Registrierung im System prüfen",
+n3:"✔ Position des Gesichts am Leser anpassen",
 
-semCom:"⚠️ Keine Verbindung",
-s1:"✔ Netzwerkkabel prüfen",
-s2:"✔ IP-Konfiguration prüfen",
-s3:"✔ System neu starten",
+semCom:"⚠️ Keine Kommunikation mit dem System",
+s1:"✔ Netzwerkkabel überprüfen",
+s2:"✔ IP-Adresse/Konfiguration prüfen",
+s3:"✔ System und Gerät neu starten",
 
-beep:"⚠️ Dauerhafter Signalton",
-b1:"✔ Drehung prüfen",
-b2:"✔ Blockierungen prüfen",
-b3:"✔ Neustart durchführen",
+beep:"⚠️ Drehkreuz mit dauerhaftem Signalton",
+b1:"✔ Prüfen, ob die Drehung abgeschlossen wurde",
+b2:"✔ Hindernisse im Drehbereich prüfen",
+b3:"✔ Drehkreuz neu starten",
 
-naoGira:"⚠️ Freigegeben aber dreht nicht",
-g1:"✔ Trockenkontakt prüfen",
-g2:"✔ Verkabelung prüfen",
-g3:"✔ Manuell testen",
+naoGira:"⚠️ Zugang freigegeben, aber Drehkreuz dreht nicht",
+g1:"✔ Verbindung des Trockenkontakts prüfen",
+g2:"✔ Kabel vom Gesichtsterminal zur Platine prüfen",
+g3:"✔ Manuelle Freigabe testen",
 
-energia:"🚨 Kein Strom",
-e1:"✔ Steckdose prüfen",
-e2:"✔ Netzteil prüfen",
-e3:"✔ Kabel prüfen",
+energia:"🚨 Kein Strom am Drehkreuz",
+e1:"✔ Steckdose und Sicherung prüfen",
+e2:"✔ Netzteil der Steuerplatine prüfen",
+e3:"✔ Stromkabel überprüfen",
 
-suporte:"🔒 Nicht gelöst?",
-textoSup:"Technischen Support anfordern",
+suporte:"🔒 Problem nicht gelöst?",
+textoSup:"Fordern Sie spezialisierten technischen Support an",
 btnSup:"💬 Technischer Support",
-btnAt:"Service anfordern",
-info:"⚡ Schnelle Antwort",
+btnAt:"Technischen Einsatz anfordern",
+info:"⚡ Schnelle Antwort in wenigen Minuten",
 
 midia:"📎 Foto oder Video senden",
-midiaTxt:"Senden Sie Bilder für schnelle Diagnose",
+midiaTxt:"Senden Sie Bilder des Problems für eine schnellere Diagnose",
 btnMidia:"An WhatsApp senden",
 
 btnTel:"📞 Kontakt",
 btnInsta:"Instagram",
-rodape:"C7 Automação • Zugangskontrolle Lösungen"
+rodape:"C7 Automação • Lösungen für Zugangskontrolle",
+
+msgSup:"Ich benötige Support für ein Drehkreuz",
+msgAt:"Ich möchte einen technischen Einsatz vereinbaren",
+msgMidia:"Ich habe ein Problem mit dem Drehkreuz. Ich werde ein Foto/Video senden"
 },
 
 en:{
 titulo:"🔧 C7 Turnstile Diagnosis",
-subtitulo:"Reduce failures and avoid service calls",
+subtitulo:"Reduce access failures and avoid unnecessary technical service calls",
 
 travada:"⚠️ Turnstile blocked",
 t1:"✔ Check user registration",
 t2:"✔ Try manual release",
-t3:"✔ Restart turnstile",
+t3:"✔ Restart the turnstile",
 
-liberada:"⚠️ Turnstile always open",
-l1:"✔ Check power supply",
-l2:"✔ Check power source",
-l3:"✔ Restart",
+liberada:"⚠️ Turnstile permanently released",
+l1:"✔ Check electrical power",
+l2:"✔ Check control board power supply",
+l3:"✔ Restart the turnstile",
 
-negado:"🔴 Access denied",
+negado:"🔴 Access denied on facial reader",
 n1:"✔ Check user status",
-n2:"✔ Check system",
-n3:"✔ Adjust face position",
+n2:"✔ Check registration in the system",
+n3:"✔ Adjust face position on the reader",
 
-semCom:"⚠️ No communication",
+semCom:"⚠️ No communication with the system",
 s1:"✔ Check network cable",
-s2:"✔ Check IP settings",
-s3:"✔ Restart system",
+s2:"✔ Check IP/configuration",
+s3:"✔ Restart system and equipment",
 
-beep:"⚠️ Constant beep",
-b1:"✔ Check rotation",
-b2:"✔ Check obstructions",
-b3:"✔ Restart",
+beep:"⚠️ Turnstile with constant beep",
+b1:"✔ Check if the rotation was completed",
+b2:"✔ Check for obstructions in the rotation",
+b3:"✔ Restart the turnstile",
 
-naoGira:"⚠️ Access granted but not rotating",
-g1:"✔ Check dry contact",
-g2:"✔ Check wiring",
-g3:"✔ Test manually",
+naoGira:"⚠️ Access granted but turnstile does not rotate",
+g1:"✔ Check dry contact terminal connection",
+g2:"✔ Check cable from facial terminal to board",
+g3:"✔ Test manual release",
 
-energia:"🚨 No power",
-e1:"✔ Check outlet",
-e2:"✔ Check power supply",
-e3:"✔ Check cable",
+energia:"🚨 No power on the turnstile",
+e1:"✔ Check outlet and circuit breaker",
+e2:"✔ Check control board power supply",
+e3:"✔ Check power cable",
 
 suporte:"🔒 Not solved?",
-textoSup:"Request technical support",
+textoSup:"Request specialized technical support",
 btnSup:"💬 Technical Support",
-btnAt:"Request Service",
-info:"⚡ Fast response",
+btnAt:"Request Technical Service",
+info:"⚡ Fast response in a few minutes",
 
 midia:"📎 Send photo or video",
-midiaTxt:"Send images for faster diagnosis",
+midiaTxt:"Send images of the problem for faster diagnosis",
 btnMidia:"Send to WhatsApp",
 
-btnTel:"📞 Contact",
+btnTel:"📞 Contact Us",
 btnInsta:"Instagram",
-rodape:"C7 Automation • Access Control Solutions"
+rodape:"C7 Automation • Access Control Solutions",
+
+msgSup:"I need support with a turnstile",
+msgAt:"I want to schedule technical service",
+msgMidia:"I have a problem with the turnstile. I will send a photo/video"
 }
 };
 
+function atualizarLinks(i){
+document.getElementById("linkSup").href =
+"https://wa.me/5521999629228?text=" + encodeURIComponent(t[i].msgSup);
+
+document.getElementById("linkAt").href =
+"https://wa.me/5521999629228?text=" + encodeURIComponent(t[i].msgAt);
+
+document.getElementById("linkMidia").href =
+"https://wa.me/5521999629228?text=" + encodeURIComponent(t[i].msgMidia);
+}
+
 function mudarIdioma(i){
-localStorage.setItem("idioma",i);
+localStorage.setItem("idioma", i);
+
 for(let k in t[i]){
 if(document.getElementById(k)){
-document.getElementById(k).innerText=t[i][k];
-}
+document.getElementById(k).innerText = t[i][k];
 }
 }
 
-window.onload=function(){
-let i=localStorage.getItem("idioma")||"pt";
-document.getElementById("idioma").value=i;
+atualizarLinks(i);
+}
+
+window.onload = function(){
+let i = localStorage.getItem("idioma") || "pt";
+document.getElementById("idioma").value = i;
 mudarIdioma(i);
 }
 </script>
