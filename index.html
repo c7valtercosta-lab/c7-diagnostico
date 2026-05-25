@@ -6,55 +6,36 @@
 <title>C7 Automação | Diagnóstico de Catraca</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="logo_c7_516.png">
-<link rel="apple-touch-icon" href="logo_c7_516.png">
-<meta name="theme-color" content="#e11d48">
-
 <style>
-body {
-  font-family: Arial;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 20px;
-}
-h1 { text-align: center; }
-
+body {font-family: Arial; background:#f4f4f4; margin:0; padding:20px;}
+h1 {text-align:center;}
 .card {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+background:white;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
+.basico {border-left:5px solid #22c55e;}
+.medio {border-left:5px solid #f59e0b;}
+.alerta {border-left:5px solid #ef4444;}
 
-.basico { border-left: 5px solid #22c55e; }
-.medio { border-left: 5px solid #f59e0b; }
-.alerta { border-left: 5px solid #ef4444; }
-
-ul { list-style: none; padding-left: 0; }
-
+ul {list-style:none; padding:0;}
 button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  background: #e11d48;
-  color: white;
-  border-radius: 8px;
-  margin-top: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: bold;
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+margin-top:10px;
+font-size:16px;
+font-weight:bold;
+color:white;
+cursor:pointer;
 }
 
-.whatsapp { background: #25D366; }
-.telefone { background: #2563eb; }
-.instagram { background: #E1306C; }
-
-.info {
-  text-align:center;
-  font-size:14px;
-  margin-top:10px;
-}
+.whatsapp {background:#25D366;}
+.telefone {background:#2563eb;}
+.instagram {background:#E1306C;}
 </style>
 
 </head>
@@ -62,7 +43,7 @@ button {
 <body>
 
 <div style="text-align:center;">
- <img src="LOGO NOVO ZAP.jpg" style="width:120px;">
+<img src="LOGO NOVO ZAP.jpg" style="width:120px;">
 </div>
 
 <!-- IDIOMA -->
@@ -75,122 +56,176 @@ button {
 </div>
 
 <h1 id="titulo">🔧 C7 Diagnóstico para Catraca</h1>
-
 <p id="subtitulo" style="text-align:center;">
 Reduza falhas no acesso e evite chamados técnicos desnecessários
 </p>
 
-<div class="card alerta">
-<h3 id="erro1">🔴 Acesso negado</h3>
-<ul>
-<li id="e1">✔ Verificar cadastro do usuário</li>
-<li id="e2">✔ Conferir sistema</li>
-<li id="e3">✔ Ajustar posicionamento</li>
-</ul>
-</div>
+<!-- PROBLEMAS -->
 
-<div class="card medio">
-<h3 id="erro2">⚠️ Sem comunicação</h3>
+<div class="card basico">
+<h3 id="travada">⚠️ Catraca travada</h3>
 <ul>
-<li id="e4">✔ Verificar rede</li>
-<li id="e5">✔ Conferir IP</li>
-<li id="e6">✔ Reiniciar sistema</li>
+<li id="t1">✔ Verificar cadastro do usuário</li>
+<li id="t2">✔ Tentar liberação manual</li>
+<li id="t3">✔ Reiniciar a catraca</li>
 </ul>
 </div>
 
 <div class="card basico">
-<h3 id="erro3">⚠️ Catraca travada</h3>
+<h3 id="liberada">⚠️ Catraca liberada direto</h3>
 <ul>
-<li id="e7">✔ Verificar usuário</li>
-<li id="e8">✔ Liberação manual</li>
-<li id="e9">✔ Reiniciar</li>
+<li id="l1">✔ Verificar alimentação elétrica</li>
+<li id="l2">✔ Conferir fonte da placa lógica</li>
+<li id="l3">✔ Reiniciar a catraca</li>
 </ul>
 </div>
 
+<div class="card alerta">
+<h3 id="negado">🔴 Acesso negado no leitor facial</h3>
+<ul>
+<li id="n1">✔ Verificar situação do usuário</li>
+<li id="n2">✔ Conferir cadastro no sistema</li>
+<li id="n3">✔ Ajustar posicionamento</li>
+</ul>
+</div>
+
+<div class="card medio">
+<h3 id="semCom">⚠️ Sem comunicação com o sistema</h3>
+<ul>
+<li id="s1">✔ Verificar cabo de rede</li>
+<li id="s2">✔ Conferir IP/configuração</li>
+<li id="s3">✔ Reiniciar sistema</li>
+</ul>
+</div>
+
+<div class="card medio">
+<h3 id="beep">⚠️ Catraca com beep constante</h3>
+<ul>
+<li id="b1">✔ Verificar se o giro foi concluído</li>
+<li id="b2">✔ Conferir obstruções</li>
+<li id="b3">✔ Reiniciar a catraca</li>
+</ul>
+</div>
+
+<div class="card basico">
+<h3 id="naoGira">⚠️ Acesso liberado mas não gira</h3>
+<ul>
+<li id="g1">✔ Verificar contato seco</li>
+<li id="g2">✔ Conferir cabeamento</li>
+<li id="g3">✔ Testar liberação manual</li>
+</ul>
+</div>
+
+<div class="card alerta">
+<h3 id="energia">🚨 Sem energia na Catraca</h3>
+<ul>
+<li id="e1">✔ Verificar tomada e disjuntor</li>
+<li id="e2">✔ Verificar fonte</li>
+<li id="e3">✔ Conferir cabo</li>
+</ul>
+</div>
+
+<!-- SUPORTE -->
+
 <div class="card">
 <h3 id="suporte">🔒 Não resolveu?</h3>
-<p id="textoSuporte">Solicite atendimento técnico</p>
+<p id="textoSup">Solicite atendimento técnico especializado</p>
 
 <a href="https://wa.me/5521999629228">
-<button class="whatsapp" id="btnSuporte">💬 Suporte Técnico</button>
+<button class="whatsapp" id="btnSup">💬 Suporte Técnico</button>
 </a>
 
 <a href="https://wa.me/5521999629228">
-<button id="btnAtendimento">Solicitar Atendimento</button>
+<button id="btnAt">Solicitar Atendimento Técnico</button>
 </a>
-
-<p class="info" id="info">⚡ Resposta rápida</p>
 </div>
+
+<!-- MIDIA -->
 
 <div class="card">
 <h3 id="midia">📎 Enviar foto ou vídeo</h3>
+<p id="midiaTxt">Envie imagens para diagnóstico mais rápido</p>
+
 <a href="https://wa.me/5521999629228">
 <button class="whatsapp" id="btnMidia">Enviar para WhatsApp</button>
 </a>
 </div>
 
+<!-- TRADUÇÃO -->
+
 <script>
-const textos = {
-pt: {
-titulo: "🔧 C7 Diagnóstico para Catraca",
-subtitulo: "Reduza falhas no acesso e evite chamados técnicos",
-erro1: "🔴 Acesso negado",
-erro2: "⚠️ Sem comunicação",
-erro3: "⚠️ Catraca travada",
-suporte: "🔒 Não resolveu?",
-textoSuporte: "Solicite atendimento técnico",
-btnSuporte: "💬 Suporte Técnico",
-btnAtendimento: "Solicitar Atendimento",
-midia: "📎 Enviar foto ou vídeo",
-btnMidia: "Enviar para WhatsApp",
-info: "⚡ Resposta rápida"
+const t = {
+pt:{
+titulo:"🔧 C7 Diagnóstico para Catraca",
+subtitulo:"Reduza falhas no acesso e evite chamados técnicos",
+travada:"⚠️ Catraca travada",
+liberada:"⚠️ Catraca liberada direto",
+negado:"🔴 Acesso negado no leitor facial",
+semCom:"⚠️ Sem comunicação com o sistema",
+beep:"⚠️ Catraca com beep constante",
+naoGira:"⚠️ Acesso liberado mas não gira",
+energia:"🚨 Sem energia na Catraca",
+suporte:"🔒 Não resolveu?",
+textoSup:"Solicite atendimento técnico especializado",
+btnSup:"💬 Suporte Técnico",
+btnAt:"Solicitar Atendimento Técnico",
+midia:"📎 Enviar foto ou vídeo",
+midiaTxt:"Envie imagens para diagnóstico mais rápido",
+btnMidia:"Enviar para WhatsApp"
 },
 
-de: {
-titulo: "🔧 C7 Diagnose für Drehkreuze",
-subtitulo: "Reduzieren Sie Störungen und vermeiden Sie unnötige Einsätze",
-erro1: "🔴 Zugriff verweigert",
-erro2: "⚠️ Keine Verbindung",
-erro3: "⚠️ Drehkreuz blockiert",
-suporte: "🔒 Nicht gelöst?",
-textoSuporte: "Technischen Support anfordern",
-btnSuporte: "💬 Technischer Support",
-btnAtendimento: "Service anfordern",
-midia: "📎 Foto oder Video senden",
-btnMidia: "An WhatsApp senden",
-info: "⚡ Schnelle Antwort"
+de:{
+titulo:"🔧 C7 Diagnose für Drehkreuze",
+subtitulo:"Reduzieren Sie Störungen und vermeiden Sie Einsätze",
+travada:"⚠️ Drehkreuz blockiert",
+liberada:"⚠️ Drehkreuz immer offen",
+negado:"🔴 Zugriff verweigert",
+semCom:"⚠️ Keine Verbindung",
+beep:"⚠️ Dauerhafter Signalton",
+naoGira:"⚠️ Zugang frei aber dreht nicht",
+energia:"🚨 Kein Strom",
+suporte:"🔒 Nicht gelöst?",
+textoSup:"Technischen Support anfordern",
+btnSup:"💬 Technischer Support",
+btnAt:"Service anfordern",
+midia:"📎 Foto oder Video senden",
+midiaTxt:"Senden Sie Bilder für schnelle Diagnose",
+btnMidia:"An WhatsApp senden"
 },
 
-en: {
-titulo: "🔧 C7 Turnstile Diagnosis",
-subtitulo: "Reduce failures and avoid unnecessary calls",
-erro1: "🔴 Access denied",
-erro2: "⚠️ No communication",
-erro3: "⚠️ Turnstile blocked",
-suporte: "🔒 Not solved?",
-textoSuporte: "Request technical support",
-btnSuporte: "💬 Technical Support",
-btnAtendimento: "Request Service",
-midia: "📎 Send photo or video",
-btnMidia: "Send to WhatsApp",
-info: "⚡ Fast response"
+en:{
+titulo:"🔧 C7 Turnstile Diagnosis",
+subtitulo:"Reduce failures and avoid service calls",
+travada:"⚠️ Turnstile blocked",
+liberada:"⚠️ Turnstile always open",
+negado:"🔴 Access denied",
+semCom:"⚠️ No communication",
+beep:"⚠️ Constant beep",
+naoGira:"⚠️ Access granted but not rotating",
+energia:"🚨 No power",
+suporte:"🔒 Not solved?",
+textoSup:"Request technical support",
+btnSup:"💬 Technical Support",
+btnAt:"Request Service",
+midia:"📎 Send photo or video",
+midiaTxt:"Send images for faster diagnosis",
+btnMidia:"Send to WhatsApp"
 }
 };
 
-function mudarIdioma(idioma){
-localStorage.setItem("idioma", idioma);
-
-for (let key in textos[idioma]){
-if(document.getElementById(key)){
-document.getElementById(key).innerText = textos[idioma][key];
+function mudarIdioma(i){
+localStorage.setItem("idioma",i);
+for(let k in t[i]){
+if(document.getElementById(k)){
+document.getElementById(k).innerText=t[i][k];
 }
 }
 }
 
-window.onload = function(){
-const idioma = localStorage.getItem("idioma") || "pt";
-document.getElementById("idioma").value = idioma;
-mudarIdioma(idioma);
+window.onload=function(){
+let i=localStorage.getItem("idioma")||"pt";
+document.getElementById("idioma").value=i;
+mudarIdioma(i);
 }
 </script>
 
