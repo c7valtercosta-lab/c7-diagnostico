@@ -56,6 +56,7 @@ cursor:pointer;
 <option value="pt">🇧🇷 Português</option>
 <option value="de">🇩🇪 Deutsch</option>
 <option value="en">🇺🇸 English</option>
+<option value="es">🇪🇸 Español</option>
 </select>
 </div>
 
@@ -171,56 +172,45 @@ const t = {
 pt:{
 titulo:"🔧 C7 Diagnóstico para Catraca",
 subtitulo:"Reduza falhas no acesso e evite chamados técnicos desnecessários",
-
 travada:"⚠️ Catraca travada",
 t1:"✔ Verificar cadastro do usuário",
 t2:"✔ Tentar liberação manual",
 t3:"✔ Reiniciar a catraca",
-
 liberada:"⚠️ Catraca liberada direto",
 l1:"✔ Verificar alimentação elétrica",
 l2:"✔ Conferir fonte da placa lógica",
 l3:"✔ Reiniciar a catraca",
-
 negado:"🔴 Acesso negado no leitor facial",
 n1:"✔ Verificar situação do usuário",
 n2:"✔ Conferir cadastro no sistema",
 n3:"✔ Ajustar posicionamento da facial no leitor",
-
 semCom:"⚠️ Sem comunicação com o sistema",
 s1:"✔ Verificar cabo de rede",
 s2:"✔ Conferir IP/configuração",
 s3:"✔ Reiniciar sistema e equipamento",
-
 beep:"⚠️ Catraca com beep constante",
 b1:"✔ Verificar se o giro foi concluído",
 b2:"✔ Conferir obstruções no giro",
 b3:"✔ Reiniciar a catraca",
-
 naoGira:"⚠️ Acesso liberado mas catraca não gira",
 g1:"✔ Verificar conexão do terminal contato seco",
 g2:"✔ Conferir cabo do contato seco do facial para placa",
 g3:"✔ Testar liberação manual",
-
 energia:"🚨 Sem energia na Catraca",
 e1:"✔ Verificar tomada e disjuntor",
 e2:"✔ Verificar fonte da placa lógica",
 e3:"✔ Conferir cabo de energia",
-
 suporte:"🔒 Não resolveu?",
 textoSup:"Solicite atendimento técnico especializado",
 btnSup:"💬 Suporte Técnico",
 btnAt:"Solicitar Atendimento Técnico",
 info:"⚡ Resposta rápida em poucos minutos",
-
 midia:"📎 Enviar foto ou vídeo",
 midiaTxt:"Envie imagens do problema para diagnóstico mais rápido",
 btnMidia:"Enviar para WhatsApp",
-
 btnTel:"📞 Fale Conosco",
 btnInsta:"Instagram",
 rodape:"C7 Automação • Soluções em Controle de Acesso",
-
 msgSup:"Preciso de suporte na catraca",
 msgAt:"Quero agendar um atendimento técnico",
 msgMidia:"Estou com problema na catraca. Vou enviar foto/vídeo"
@@ -229,56 +219,45 @@ msgMidia:"Estou com problema na catraca. Vou enviar foto/vídeo"
 de:{
 titulo:"🔧 C7 Diagnose für Drehkreuze",
 subtitulo:"Reduzieren Sie Zugangsstörungen und vermeiden Sie unnötige technische Einsätze",
-
 travada:"⚠️ Drehkreuz blockiert",
 t1:"✔ Benutzerregistrierung überprüfen",
 t2:"✔ Manuelle Freigabe testen",
 t3:"✔ Drehkreuz neu starten",
-
 liberada:"⚠️ Drehkreuz dauerhaft freigegeben",
 l1:"✔ Stromversorgung überprüfen",
 l2:"✔ Netzteil der Steuerplatine prüfen",
 l3:"✔ Drehkreuz neu starten",
-
 negado:"🔴 Zugriff am Gesichtserkennungsleser verweigert",
 n1:"✔ Benutzerstatus überprüfen",
 n2:"✔ Registrierung im System prüfen",
 n3:"✔ Position des Gesichts am Leser anpassen",
-
 semCom:"⚠️ Keine Kommunikation mit dem System",
 s1:"✔ Netzwerkkabel überprüfen",
 s2:"✔ IP-Adresse/Konfiguration prüfen",
 s3:"✔ System und Gerät neu starten",
-
 beep:"⚠️ Drehkreuz mit dauerhaftem Signalton",
 b1:"✔ Prüfen, ob die Drehung abgeschlossen wurde",
 b2:"✔ Hindernisse im Drehbereich prüfen",
 b3:"✔ Drehkreuz neu starten",
-
 naoGira:"⚠️ Zugang freigegeben, aber Drehkreuz dreht nicht",
 g1:"✔ Verbindung des Trockenkontakts prüfen",
 g2:"✔ Kabel vom Gesichtsterminal zur Platine prüfen",
 g3:"✔ Manuelle Freigabe testen",
-
 energia:"🚨 Kein Strom am Drehkreuz",
 e1:"✔ Steckdose und Sicherung prüfen",
 e2:"✔ Netzteil der Steuerplatine prüfen",
 e3:"✔ Stromkabel überprüfen",
-
 suporte:"🔒 Problem nicht gelöst?",
 textoSup:"Fordern Sie spezialisierten technischen Support an",
 btnSup:"💬 Technischer Support",
 btnAt:"Technischen Einsatz anfordern",
 info:"⚡ Schnelle Antwort in wenigen Minuten",
-
 midia:"📎 Foto oder Video senden",
 midiaTxt:"Senden Sie Bilder des Problems für eine schnellere Diagnose",
 btnMidia:"An WhatsApp senden",
-
 btnTel:"📞 Kontakt",
 btnInsta:"Instagram",
 rodape:"C7 Automação • Lösungen für Zugangskontrolle",
-
 msgSup:"Ich benötige Support für ein Drehkreuz",
 msgAt:"Ich möchte einen technischen Einsatz vereinbaren",
 msgMidia:"Ich habe ein Problem mit dem Drehkreuz. Ich werde ein Foto/Video senden"
@@ -287,59 +266,95 @@ msgMidia:"Ich habe ein Problem mit dem Drehkreuz. Ich werde ein Foto/Video sende
 en:{
 titulo:"🔧 C7 Turnstile Diagnosis",
 subtitulo:"Reduce access failures and avoid unnecessary technical service calls",
-
 travada:"⚠️ Turnstile blocked",
 t1:"✔ Check user registration",
 t2:"✔ Try manual release",
 t3:"✔ Restart the turnstile",
-
 liberada:"⚠️ Turnstile permanently released",
 l1:"✔ Check electrical power",
 l2:"✔ Check control board power supply",
 l3:"✔ Restart the turnstile",
-
 negado:"🔴 Access denied on facial reader",
 n1:"✔ Check user status",
 n2:"✔ Check registration in the system",
 n3:"✔ Adjust face position on the reader",
-
 semCom:"⚠️ No communication with the system",
 s1:"✔ Check network cable",
 s2:"✔ Check IP/configuration",
 s3:"✔ Restart system and equipment",
-
 beep:"⚠️ Turnstile with constant beep",
 b1:"✔ Check if the rotation was completed",
 b2:"✔ Check for obstructions in the rotation",
 b3:"✔ Restart the turnstile",
-
 naoGira:"⚠️ Access granted but turnstile does not rotate",
 g1:"✔ Check dry contact terminal connection",
 g2:"✔ Check cable from facial terminal to board",
 g3:"✔ Test manual release",
-
 energia:"🚨 No power on the turnstile",
 e1:"✔ Check outlet and circuit breaker",
 e2:"✔ Check control board power supply",
 e3:"✔ Check power cable",
-
 suporte:"🔒 Not solved?",
 textoSup:"Request specialized technical support",
 btnSup:"💬 Technical Support",
 btnAt:"Request Technical Service",
 info:"⚡ Fast response in a few minutes",
-
 midia:"📎 Send photo or video",
 midiaTxt:"Send images of the problem for faster diagnosis",
 btnMidia:"Send to WhatsApp",
-
 btnTel:"📞 Contact Us",
 btnInsta:"Instagram",
 rodape:"C7 Automation • Access Control Solutions",
-
 msgSup:"I need support with a turnstile",
 msgAt:"I want to schedule technical service",
 msgMidia:"I have a problem with the turnstile. I will send a photo/video"
+},
+
+es:{
+titulo:"🔧 Diagnóstico C7 para Torniquetes",
+subtitulo:"Reduzca fallas de acceso y evite llamadas técnicas innecesarias",
+travada:"⚠️ Torniquete bloqueado",
+t1:"✔ Verificar registro del usuario",
+t2:"✔ Intentar liberación manual",
+t3:"✔ Reiniciar el torniquete",
+liberada:"⚠️ Torniquete liberado directamente",
+l1:"✔ Verificar alimentación eléctrica",
+l2:"✔ Revisar fuente de la placa lógica",
+l3:"✔ Reiniciar el torniquete",
+negado:"🔴 Acceso denegado en lector facial",
+n1:"✔ Verificar situación del usuario",
+n2:"✔ Revisar registro en el sistema",
+n3:"✔ Ajustar posicionamiento del rostro en el lector",
+semCom:"⚠️ Sin comunicación con el sistema",
+s1:"✔ Verificar cable de red",
+s2:"✔ Revisar IP/configuración",
+s3:"✔ Reiniciar sistema y equipo",
+beep:"⚠️ Torniquete con pitido constante",
+b1:"✔ Verificar si el giro fue concluido",
+b2:"✔ Revisar obstrucciones en el giro",
+b3:"✔ Reiniciar el torniquete",
+naoGira:"⚠️ Acceso liberado pero el torniquete no gira",
+g1:"✔ Verificar conexión del terminal de contacto seco",
+g2:"✔ Revisar cable del contacto seco del facial hacia la placa",
+g3:"✔ Probar liberación manual",
+energia:"🚨 Sin energía en el torniquete",
+e1:"✔ Verificar toma de corriente y disyuntor",
+e2:"✔ Revisar fuente de la placa lógica",
+e3:"✔ Revisar cable de energía",
+suporte:"🔒 ¿No se resolvió?",
+textoSup:"Solicite atención técnica especializada",
+btnSup:"💬 Soporte Técnico",
+btnAt:"Solicitar Atención Técnica",
+info:"⚡ Respuesta rápida en pocos minutos",
+midia:"📎 Enviar foto o video",
+midiaTxt:"Envíe imágenes del problema para un diagnóstico más rápido",
+btnMidia:"Enviar a WhatsApp",
+btnTel:"📞 Contacto",
+btnInsta:"Instagram",
+rodape:"C7 Automación • Soluciones en Control de Acceso",
+msgSup:"Necesito soporte con un torniquete",
+msgAt:"Quiero agendar una atención técnica",
+msgMidia:"Tengo un problema con el torniquete. Voy a enviar foto/video"
 }
 };
 
@@ -360,7 +375,6 @@ if(document.getElementById(k)){
 document.getElementById(k).innerText = t[i][k];
 }
 }
-
 atualizarLinks(i);
 }
 
