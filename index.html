@@ -355,8 +355,6 @@ document.getElementById("linkMidia").href =
 }
 
 function mudarIdioma(i){
-localStorage.setItem("idioma", i);
-
 for(let k in t[i]){
 if(document.getElementById(k)){
 document.getElementById(k).innerText = t[i][k];
@@ -367,7 +365,7 @@ atualizarLinks(i);
 }
 
 window.onload = function(){
-let i = localStorage.getItem("idioma") || "pt";
+let i = "pt";
 document.getElementById("idioma").value = i;
 mudarIdioma(i);
 }
