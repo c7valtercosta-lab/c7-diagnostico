@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {font-family: Arial; background:#f4f4f4; margin:0; padding:20px;}
+body {font-family: Arial; background:#f4f4f4; padding:20px;}
 h1 {text-align:center;}
+
 .card {
 background:white;
 padding:15px;
@@ -16,11 +17,13 @@ margin:10px 0;
 border-radius:10px;
 box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
+
 .basico {border-left:5px solid #22c55e;}
 .medio {border-left:5px solid #f59e0b;}
 .alerta {border-left:5px solid #ef4444;}
 
-ul {list-style:none; padding:0;}
+ul {list-style:none; padding:0; line-height:1.6;}
+
 button {
 width:100%;
 padding:12px;
@@ -34,8 +37,11 @@ cursor:pointer;
 }
 
 .whatsapp {background:#25D366;}
+.vermelho {background:#e11d48;}
 .telefone {background:#2563eb;}
 .instagram {background:#E1306C;}
+
+.info {text-align:center; font-size:14px; margin-top:10px;}
 </style>
 
 </head>
@@ -85,7 +91,7 @@ Reduza falhas no acesso e evite chamados técnicos desnecessários
 <ul>
 <li id="n1">✔ Verificar situação do usuário</li>
 <li id="n2">✔ Conferir cadastro no sistema</li>
-<li id="n3">✔ Ajustar posicionamento</li>
+<li id="n3">✔ Ajustar posicionamento da facial no leitor</li>
 </ul>
 </div>
 
@@ -94,7 +100,7 @@ Reduza falhas no acesso e evite chamados técnicos desnecessários
 <ul>
 <li id="s1">✔ Verificar cabo de rede</li>
 <li id="s2">✔ Conferir IP/configuração</li>
-<li id="s3">✔ Reiniciar sistema</li>
+<li id="s3">✔ Reiniciar sistema e equipamento</li>
 </ul>
 </div>
 
@@ -102,16 +108,16 @@ Reduza falhas no acesso e evite chamados técnicos desnecessários
 <h3 id="beep">⚠️ Catraca com beep constante</h3>
 <ul>
 <li id="b1">✔ Verificar se o giro foi concluído</li>
-<li id="b2">✔ Conferir obstruções</li>
+<li id="b2">✔ Conferir obstruções no giro</li>
 <li id="b3">✔ Reiniciar a catraca</li>
 </ul>
 </div>
 
 <div class="card basico">
-<h3 id="naoGira">⚠️ Acesso liberado mas não gira</h3>
+<h3 id="naoGira">⚠️ Acesso liberado mas catraca não gira</h3>
 <ul>
-<li id="g1">✔ Verificar contato seco</li>
-<li id="g2">✔ Conferir cabeamento</li>
+<li id="g1">✔ Verificar conexão do terminal contato seco</li>
+<li id="g2">✔ Conferir cabo do contato seco do facial para placa</li>
 <li id="g3">✔ Testar liberação manual</li>
 </ul>
 </div>
@@ -120,8 +126,8 @@ Reduza falhas no acesso e evite chamados técnicos desnecessários
 <h3 id="energia">🚨 Sem energia na Catraca</h3>
 <ul>
 <li id="e1">✔ Verificar tomada e disjuntor</li>
-<li id="e2">✔ Verificar fonte</li>
-<li id="e3">✔ Conferir cabo</li>
+<li id="e2">✔ Verificar fonte da placa lógica</li>
+<li id="e3">✔ Conferir cabo de energia</li>
 </ul>
 </div>
 
@@ -136,80 +142,204 @@ Reduza falhas no acesso e evite chamados técnicos desnecessários
 </a>
 
 <a href="https://wa.me/5521999629228">
-<button id="btnAt">Solicitar Atendimento Técnico</button>
+<button class="vermelho" id="btnAt">Solicitar Atendimento Técnico</button>
 </a>
+
+<p class="info" id="info">⚡ Resposta rápida em poucos minutos</p>
 </div>
 
 <!-- MIDIA -->
 
 <div class="card">
 <h3 id="midia">📎 Enviar foto ou vídeo</h3>
-<p id="midiaTxt">Envie imagens para diagnóstico mais rápido</p>
+<p id="midiaTxt">Envie imagens do problema para diagnóstico mais rápido</p>
 
 <a href="https://wa.me/5521999629228">
 <button class="whatsapp" id="btnMidia">Enviar para WhatsApp</button>
 </a>
 </div>
 
-<!-- TRADUÇÃO -->
+<!-- CONTATO -->
+
+<div style="display:flex; gap:10px; margin-top:20px;">
+<a href="tel:+5521999629228" style="flex:1;">
+<button class="telefone" id="btnTel">📞 Fale Conosco</button>
+</a>
+
+<a href="https://instagram.com/c7automacao" style="flex:1;">
+<button class="instagram" id="btnInsta">Instagram</button>
+</a>
+</div>
+
+<p style="text-align:center; font-size:12px; margin-top:20px;" id="rodape">
+C7 Automação • Soluções em Controle de Acesso
+</p>
+
+<!-- TRADUÇÃO COMPLETA -->
 
 <script>
 const t = {
+
 pt:{
 titulo:"🔧 C7 Diagnóstico para Catraca",
-subtitulo:"Reduza falhas no acesso e evite chamados técnicos",
+subtitulo:"Reduza falhas no acesso e evite chamados técnicos desnecessários",
+
 travada:"⚠️ Catraca travada",
+t1:"✔ Verificar cadastro do usuário",
+t2:"✔ Tentar liberação manual",
+t3:"✔ Reiniciar a catraca",
+
 liberada:"⚠️ Catraca liberada direto",
+l1:"✔ Verificar alimentação elétrica",
+l2:"✔ Conferir fonte da placa lógica",
+l3:"✔ Reiniciar a catraca",
+
 negado:"🔴 Acesso negado no leitor facial",
+n1:"✔ Verificar situação do usuário",
+n2:"✔ Conferir cadastro no sistema",
+n3:"✔ Ajustar posicionamento da facial no leitor",
+
 semCom:"⚠️ Sem comunicação com o sistema",
+s1:"✔ Verificar cabo de rede",
+s2:"✔ Conferir IP/configuração",
+s3:"✔ Reiniciar sistema e equipamento",
+
 beep:"⚠️ Catraca com beep constante",
-naoGira:"⚠️ Acesso liberado mas não gira",
+b1:"✔ Verificar se o giro foi concluído",
+b2:"✔ Conferir obstruções no giro",
+b3:"✔ Reiniciar a catraca",
+
+naoGira:"⚠️ Acesso liberado mas catraca não gira",
+g1:"✔ Verificar conexão do terminal contato seco",
+g2:"✔ Conferir cabo do contato seco do facial para placa",
+g3:"✔ Testar liberação manual",
+
 energia:"🚨 Sem energia na Catraca",
+e1:"✔ Verificar tomada e disjuntor",
+e2:"✔ Verificar fonte da placa lógica",
+e3:"✔ Conferir cabo de energia",
+
 suporte:"🔒 Não resolveu?",
 textoSup:"Solicite atendimento técnico especializado",
 btnSup:"💬 Suporte Técnico",
 btnAt:"Solicitar Atendimento Técnico",
+info:"⚡ Resposta rápida em poucos minutos",
+
 midia:"📎 Enviar foto ou vídeo",
-midiaTxt:"Envie imagens para diagnóstico mais rápido",
-btnMidia:"Enviar para WhatsApp"
+midiaTxt:"Envie imagens do problema para diagnóstico mais rápido",
+btnMidia:"Enviar para WhatsApp",
+
+btnTel:"📞 Fale Conosco",
+btnInsta:"Instagram",
+rodape:"C7 Automação • Soluções em Controle de Acesso"
 },
 
 de:{
 titulo:"🔧 C7 Diagnose für Drehkreuze",
-subtitulo:"Reduzieren Sie Störungen und vermeiden Sie Einsätze",
+subtitulo:"Reduzieren Sie Störungen und vermeiden Sie unnötige Einsätze",
+
 travada:"⚠️ Drehkreuz blockiert",
+t1:"✔ Benutzer überprüfen",
+t2:"✔ Manuelle Freigabe testen",
+t3:"✔ Drehkreuz neu starten",
+
 liberada:"⚠️ Drehkreuz immer offen",
+l1:"✔ Stromversorgung prüfen",
+l2:"✔ Netzteil überprüfen",
+l3:"✔ Neustart durchführen",
+
 negado:"🔴 Zugriff verweigert",
+n1:"✔ Benutzerstatus prüfen",
+n2:"✔ System prüfen",
+n3:"✔ Gesicht korrekt positionieren",
+
 semCom:"⚠️ Keine Verbindung",
+s1:"✔ Netzwerkkabel prüfen",
+s2:"✔ IP-Konfiguration prüfen",
+s3:"✔ System neu starten",
+
 beep:"⚠️ Dauerhafter Signalton",
-naoGira:"⚠️ Zugang frei aber dreht nicht",
+b1:"✔ Drehung prüfen",
+b2:"✔ Blockierungen prüfen",
+b3:"✔ Neustart durchführen",
+
+naoGira:"⚠️ Freigegeben aber dreht nicht",
+g1:"✔ Trockenkontakt prüfen",
+g2:"✔ Verkabelung prüfen",
+g3:"✔ Manuell testen",
+
 energia:"🚨 Kein Strom",
+e1:"✔ Steckdose prüfen",
+e2:"✔ Netzteil prüfen",
+e3:"✔ Kabel prüfen",
+
 suporte:"🔒 Nicht gelöst?",
 textoSup:"Technischen Support anfordern",
 btnSup:"💬 Technischer Support",
 btnAt:"Service anfordern",
+info:"⚡ Schnelle Antwort",
+
 midia:"📎 Foto oder Video senden",
 midiaTxt:"Senden Sie Bilder für schnelle Diagnose",
-btnMidia:"An WhatsApp senden"
+btnMidia:"An WhatsApp senden",
+
+btnTel:"📞 Kontakt",
+btnInsta:"Instagram",
+rodape:"C7 Automação • Zugangskontrolle Lösungen"
 },
 
 en:{
 titulo:"🔧 C7 Turnstile Diagnosis",
 subtitulo:"Reduce failures and avoid service calls",
+
 travada:"⚠️ Turnstile blocked",
+t1:"✔ Check user registration",
+t2:"✔ Try manual release",
+t3:"✔ Restart turnstile",
+
 liberada:"⚠️ Turnstile always open",
+l1:"✔ Check power supply",
+l2:"✔ Check power source",
+l3:"✔ Restart",
+
 negado:"🔴 Access denied",
+n1:"✔ Check user status",
+n2:"✔ Check system",
+n3:"✔ Adjust face position",
+
 semCom:"⚠️ No communication",
+s1:"✔ Check network cable",
+s2:"✔ Check IP settings",
+s3:"✔ Restart system",
+
 beep:"⚠️ Constant beep",
+b1:"✔ Check rotation",
+b2:"✔ Check obstructions",
+b3:"✔ Restart",
+
 naoGira:"⚠️ Access granted but not rotating",
+g1:"✔ Check dry contact",
+g2:"✔ Check wiring",
+g3:"✔ Test manually",
+
 energia:"🚨 No power",
+e1:"✔ Check outlet",
+e2:"✔ Check power supply",
+e3:"✔ Check cable",
+
 suporte:"🔒 Not solved?",
 textoSup:"Request technical support",
 btnSup:"💬 Technical Support",
 btnAt:"Request Service",
+info:"⚡ Fast response",
+
 midia:"📎 Send photo or video",
 midiaTxt:"Send images for faster diagnosis",
-btnMidia:"Send to WhatsApp"
+btnMidia:"Send to WhatsApp",
+
+btnTel:"📞 Contact",
+btnInsta:"Instagram",
+rodape:"C7 Automation • Access Control Solutions"
 }
 };
 
